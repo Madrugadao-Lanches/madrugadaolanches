@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+    --primary: #010066;
+    --secondary: #fef011;
+    --other: #584040;
+    --details: #FBFEF9;
+    --contrast: #E54B4B;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-55px);
+    }
+
+    100% {
+        transform: translateY(55px);
+    }
+}
+
+@keyframes down {
+    0% {
+        margin: 0;
+    }
+
+    50% {
+        margin: 15px;
+    }
+
+    100% {
+        margin: 0;
+    }
+}
+
+
+#logo img {
+    height: 70px;
+}
+
+
+.navbar {
+    background-image: linear-gradient(to top, var(--primary), var(--other)) !important;
+
+}
+.text-bg-dark{
+    background-color: #09082e !important;
+}
+.btn-warning {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-radius: 5px;
+}
+.offcanvas.offcanvas-end{
+    width: 50%;
+}
+
+.btn-outline-warning {
+    border-color: var(--secondary);
+}
+
+.offcanvas a {
+    color: var(--details);
+}
+
+.navbar-collapse {}
+
+.navbar-toggler {
+    border: 0;
+}
+
+button:focus:not(:focus-visible) {
+    color: transparent;
+    outline: 1;
+}
+
+main h1 {
+
+    font-weight: 700;
+    font-size: 60px;
+
+}
+
+main h2 {
+    color: var(--contrast);
+    font-weight: 700;
+}
+
+main span {
+    display: block;
+    color: var(--contrast);
+}
+
+main {
+    padding: 70px 20px;
+    position: relative;
+    height: 600px;
+    background-image: linear-gradient(to bottom, var(--primary), #09082e);
+    color: #FBFEF9;
+}
+
+.section-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.section-main a {
+    width: 40%;
+    padding: 20px;
+}
+
+main p {
+    max-width: 700px;
+}
+
+main hgroup {
+    margin-bottom: 40px;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary);
+    clip-path: circle(45% at bottom right);
+}
+
+#burguer img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-image: url(../img/burguer.png);
+
+}
+
+#refri img {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    height: 75%;
+
+
+}
+
+.arrow {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.arrow img {
+    height: 15px;
+    animation-name: down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    filter: invert(1);
+}
+
+
+.product-area .title {
+    margin-top: 20px;
+}
+
+.product {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+}
+
+.informations {
+    padding: 80px;
+}
+
+
+
+
+#sandwich {
+    background-image: url(../img/sandwich.jpg);
+    background-size: cover;
+    filter: brightness(.5)
+}
+
+#drink {
+    background-image: url(../img/drink.jpg);
+    background-size: cover;
+}
+
+#combo {
+    background-image: url(../img/combo.jpg);
+    background-size: cover;
+}
+
+.bar {
+    height: 10px;
+    background-color: var(--primary);
+    max-width: 168px;
+}
+
+.aboutus {
+    display: grid;
+    padding: 80px;
+    grid-template-columns: 2fr 1fr;
+    text-align: justify;
+    position: relative;
+}
+
+.aboutus img {
+    margin-left: 20px;
+    animation: up 5s infinite alternate;
+    width: 90%;
+}
+
+.about {
+    margin-top: 60px;
+}
+
+.about div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    box-shadow: 2px 2px 2px var(--other);
+    border-radius: 50%;
+    background-color: var(--secondary);
+}
+
+.about a,
+.about {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+#place {
+    background-image: url(../img/madrugadao.png);
+    background-size: cover;
+    opacity: 50%;
+    z-index: -1;
+}
+
+.contactus {
+    padding: 80px;
+    display: grid;
+    grid-template-columns: 2fr;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    color: var(--details);
+    background-color: var(--primary);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--details);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#social {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media(max-width:826px) {
+
+    #burguer img {
+        display: none;
+
+    }
+
+    #refri img {
+        display: none;
+    }
+
+    * {
+        font-size: 1rem;
+    }
+
+
+
+    footer {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contactus {
+        grid-template-columns: 3fr;
+    }
+
+}
+
+@media(max-width:762px) {
+    main h1{
+        font-size: 2rem;
+    }
+    .image {
+        display: none;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about div{
+        margin-left: 0 !important;
+        margin-bottom: 10px;
+        width: 100%;
+       
+    }
+    .informations{
+        padding: 30px;
+    }
+    .about div p{
+        font-size: .7rem;
+    }
+    .aboutus img {
+        display: none;
+    }
+
+    .product {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:426px) {
+    main{
+        height: 400px;
+    }
+    .section-main{
+        justify-content: flex-start;
+    }
+    .informations, .aboutus, .contactus{
+        padding: 20px;
+    }
+}
